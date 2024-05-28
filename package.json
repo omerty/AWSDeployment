@@ -1,0 +1,35 @@
+{
+  "name": "omers-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.5",
+    "@mui/material": "^5.15.5",
+    "@mui/types": "^7.2.13",
+    "@syncfusion/ej2-react-popups": "^24.1.46",
+    "ityped": "^1.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-frame-component": "^5.2.6",
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@types/ityped": "^1.0.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "gh-pages": "^6.1.1",
+    "typescript": "^5.3.3",
+    "vite": "^4.1.0"
+  }
+}
