@@ -17,8 +17,11 @@
     "@mui/material": "^5.15.5",
     "@mui/types": "^7.2.13",
     "@syncfusion/ej2-react-popups": "^24.1.46",
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
     "ityped": "^1.0.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-frame-component": "^5.2.6",
     "react-router-dom": "^6.23.1"

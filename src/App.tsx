@@ -1,4 +1,5 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import ButtonAppBar from './ToolBar';
 import MainPage from './MainPage';
 import { StrictMode } from 'react';
@@ -6,6 +7,7 @@ import TypeWriter from './TypeWriter';
 import { StyledEngineProvider } from '@mui/material/styles';
 import Box from './BoxText';
 import GitHubPage from './GitHubPage';
+import Chatbot from './chatbot';
 
 function App() {
   let css = `
@@ -44,7 +46,6 @@ function App() {
       flex-direction: column;
     }
   `;
-
   return (
     <StrictMode>
       <style>{css}</style>
@@ -62,7 +63,7 @@ function App() {
           color: '#31aaf5', 
           margin: '0', 
           fontFamily: 'Arial, sans-serif',
-          marginTop: 210
+          marginTop: 225
         }}>
           Hi, I'm
         </h1>
@@ -79,6 +80,7 @@ function App() {
         <ButtonAppBar />
         <MainPage />
         <GitHubPage/>
+        <Chatbot/>
       </StyledEngineProvider>
     </StrictMode>
   );
