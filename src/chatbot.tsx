@@ -16,13 +16,6 @@ const Chatbot = () => {
     }
   };
 
-  const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault(); // Prevent default Enter key behavior (e.g., form submission)
-      sendMessage(); // Call sendMessage when Enter key is pressed
-    }
-  };
-
   const toggleChatbot = () => {
     setShowChatbot(!showChatbot);
   };
@@ -87,7 +80,6 @@ const Chatbot = () => {
             type="text"
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}
-            onKeyPress={handleKeyPress}
           />
           <button onClick={sendMessage}>Send</button>
         </div>
