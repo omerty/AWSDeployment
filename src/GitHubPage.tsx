@@ -59,11 +59,11 @@ function GitHubPage() {
             <div className="BitCoin">
                 <Tooltip title="Click to explore more about Bitcoin">
                     <a href="https://github.com/omerty/-Exploring-the-Bitcoin-Cryptocurrency-Market-DataCamp-project" target="_self">
-                        <img id='BitCoin1' src="StockMarketImg.jpg" alt="Scroll Image" />
+                        <img id='BitCoin1' src="StockMarketImg.png" alt="Scroll Image" />
                     </a>
                 </Tooltip>
                 <a href="https://github.com/omerty/-Exploring-the-Bitcoin-Cryptocurrency-Market-DataCamp-project" className='Header1' target="_self">
-                    Exploring Bitcoin Currency Data Science Project
+                    Exploring Bitcoin Currency Data Science Project 
                 </a>
             </div>
             <div className="NetflixClone">
