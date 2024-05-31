@@ -59,7 +59,7 @@ function GitHubPage() {
             <div className="BitCoin">
                 <Tooltip title="Click to explore more about Bitcoin">
                     <a href="https://github.com/omerty/-Exploring-the-Bitcoin-Cryptocurrency-Market-DataCamp-project" target="_self">
-                        <img id='BitCoin1' src="StockMarketImg.png" alt="Scroll Image" />
+                        <img id='BitCoin1' src="StockMarketImg.jpg" alt="Scroll Image" />
                     </a>
                 </Tooltip>
                 <a href="https://github.com/omerty/-Exploring-the-Bitcoin-Cryptocurrency-Market-DataCamp-project" className='Header1' target="_self">
@@ -69,7 +69,7 @@ function GitHubPage() {
             <div className="NetflixClone">
                 <Tooltip title="Click to explore more about NetFlix CLone">
                     <a href="https://github.com/omerty/Netflix--Cloone-Beta-" target="_self">
-                        <img id='NetflixClone1' src="src/NetflixClone.png" alt="Scroll Image" />
+                        <img id='NetflixClone1' src="/NetflixClone.png" alt="Scroll Image" />
                     </a>
                 </Tooltip>
                 <a href="https://github.com/omerty/Netflix--Cloone-Beta-" className='Header2' target="_blank" rel="noopener noreferrer">
