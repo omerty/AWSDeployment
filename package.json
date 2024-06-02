@@ -17,6 +17,7 @@
     "@mui/material": "^5.15.5",
     "@mui/types": "^7.2.13",
     "@syncfusion/ej2-react-popups": "^24.1.46",
+    "@use-effect/did-update": "^0.0.3",
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "ityped": "^1.0.3",
