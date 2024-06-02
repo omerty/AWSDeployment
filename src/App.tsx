@@ -1,86 +1,89 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
+import { StrictMode } from 'react';
 import ButtonAppBar from './ToolBar';
 import MainPage from './MainPage';
-import { StrictMode } from 'react';
 import TypeWriter from './TypeWriter';
 import { StyledEngineProvider } from '@mui/material/styles';
-import Box from './BoxText';
 import GitHubPage from './GitHubPage';
 import Chatbot from './chatbot';
 
 function App() {
+  const projectsRef = useRef<HTMLDivElement>(null);
+
   let css = `
   html, body {
-    background-color: #dae8de;
     margin: 0;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
   }
-  
+
   body {
-    background-color: #dae8de;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/028/536/656/original/abstract-background-illustration-on-gradient-mesh-design-style-elegant-black-grey-colors-blend-suitable-for-website-wallpaper-digital-banner-decoration-backdrop-poster-free-vector.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
-
-  body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #dae8de;
-    pointer-events: none;
-    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 50000vh;
   }
   
-    .Introduction { 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+  .Introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   `;
+
   return (
     <StrictMode>
       <style>{css}</style>
-      <div
-        style={{
-          position: 'absolute',
-          top: '40%', // Adjust as needed
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          textAlign: 'center',
-        }}
-      >
-        <h1 style={{ 
-          fontSize: '48px', 
-          color: '#31aaf5', 
-          margin: '0', 
-          fontFamily: 'Arial, sans-serif',
-          marginTop: 225
-        }}>
-          Hi, I'm
-        </h1>
-        <h1 style={{ 
-          fontSize: '48px', 
-          color: '#31aaf5', 
-          margin: '0', 
-          fontFamily: 'Arial, sans-serif',
-        }}>
-          <TypeWriter />
-        </h1>
-      </div>
       <StyledEngineProvider injectFirst>
-        <ButtonAppBar />
+        <ButtonAppBar projectsRef={projectsRef} />
         <MainPage />
-        <GitHubPage/>
-        <Chatbot/>
+        <div ref={projectsRef}>
+          <GitHubPage />
+        </div>
+        <Chatbot />
+        <div
+          style={{
+            position: 'absolute',
+            top: '38%', // Adjust as needed
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            textAlign: 'center',
+          }}
+        >
+          <h1 style={{
+            fontSize: '48px',
+            color: '#31aaf5',
+            margin: '0',
+            fontFamily: 'Arial, sans-serif',
+            marginTop: 210
+          }}>
+            Hi, I'm
+          </h1>
+        </div>
+        <div
+          style={{
+            position: 'absolute',
+            top: '56%', // Adjust as needed
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            textAlign: 'center',
+          }}
+        >
+          <h1 style={{
+            fontSize: '48px',
+            color: '#31aaf5',
+            margin: '0',
+            fontFamily: 'Arial, sans-serif',
+          }}>
+            <TypeWriter />
+          </h1>
+        </div>
       </StyledEngineProvider>
     </StrictMode>
   );

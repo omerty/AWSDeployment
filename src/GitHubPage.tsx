@@ -24,7 +24,7 @@ function GitHubPage() {
       margin-bottom: 34px;
       font-family: 'Monaco';
       font-size: 30px;
-      color: black;
+      color: white;
     }
 
     .NetflixClone img {
@@ -44,11 +44,11 @@ function GitHubPage() {
       text-align: center;
       position: absolute;
       top: 115%;
-      left: 67.5%;
+      left: 76%;
       margin-bottom: 34px;
       font-family: 'Monaco';
       font-size: 30px;
-      color: black;
+      color: white;
     }
 
     .MachineLearningChatBot img {
@@ -72,7 +72,7 @@ function GitHubPage() {
         margin-bottom: 34px;
         font-family: 'Monaco';
         font-size: 30px;
-        color: black;
+        color: white;
     }
     `;
 
@@ -97,16 +97,16 @@ function GitHubPage() {
                     </a>
                 </Tooltip>
                 <a href="https://github.com/omerty/Netflix--Cloone-Beta-" className='Header2' target="_blank" rel="noopener noreferrer">
-                    Netflix Clone Front-End Development
+                    Netflix Clone 
                 </a>
             </div>
             <div className="MachineLearningChatBot">
                 <Tooltip title="Click to explore more about Our Machine Learning ChatBot">
-                    <a href="https://github.com/omerty/Netflix--Cloone-Beta-" target="_self">
+                    <a href="https://github.com/omerty/SimpleMachineLearning" target="_self">
                         <img id='MachineLearning1' src="/MachineLearningChatBot.png" alt="Scroll Image" />
                     </a>
                 </Tooltip>
-                <a href="https://github.com/omerty/Netflix--Cloone-Beta-" className='Header3' target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/omerty/SimpleMachineLearning" className='Header3' target="_blank" rel="noopener noreferrer">
                     Machine Learning Chat-Bot
                 </a>
             </div>

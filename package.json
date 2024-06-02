@@ -24,7 +24,8 @@
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
     "react-frame-component": "^5.2.6",
-    "react-router-dom": "^6.23.1"
+    "react-router-dom": "^6.23.1",
+    "use-carousel-hook": "^0.2.1"
   },
   "devDependencies": {
     "@types/ityped": "^1.0.3",

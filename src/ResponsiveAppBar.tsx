@@ -1,4 +1,5 @@
-import React, { useState, useEffect, RefObject } from 'react';
+import * as React from 'react';
+import { useState, useEffect, RefObject } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,20 +15,11 @@ const pages = ['About', 'Projects', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 interface ResponsiveAppBarProps {
-  projectsRef: RefObject<HTMLDivElement>;
+  handleScrollToSection: (ref: RefObject<HTMLElement>) => void;
+  projectsRef: RefObject<HTMLElement>;
 }
 
-const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({ projectsRef}) => {
-
-  const scrollToSection = (elementRef: RefObject<HTMLDivElement>) => {
-    if (elementRef.current) {
-      window.scrollTo({
-        top: elementRef.current.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  }
-
+function ResponsiveAppBar({ handleScrollToSection, projectsRef }: ResponsiveAppBarProps) {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
   const [showAppBar, setShowAppBar] = useState(true);
@@ -62,9 +54,16 @@ const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({ projectsRef}) => {
     };
   }, []);
 
+  const handleMenuClick = (page: string) => {
+    handleCloseNavMenu();
+    if (page === 'Projects') {
+      handleScrollToSection(projectsRef);
+    }
+  };
+
   return (
     showAppBar && (
-      <AppBar position="fixed" style={{ top: 0, backgroundColor: 'white', border: 'none' }}>
+      <AppBar position="fixed" style={{ top: 0, backgroundColor: '#dae8de', border: 'none' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
@@ -115,15 +114,7 @@ const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({ projectsRef}) => {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem
-                    key={page}
-                    onClick={() => {
-                      handleCloseNavMenu();
-                      if (page === 'Projects') {
-                        scrollToSection(projectsRef);
-                      }
-                    }}
-                  >
+                  <MenuItem key={page} onClick={() => handleMenuClick(page)}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
@@ -151,11 +142,7 @@ const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({ projectsRef}) => {
               {pages.map((page) => (
                 <Button
                   key={page}
-                  onClick={() => {
-                    if (page === 'Projects') {
-                      scrollToSection(projectsRef);
-                    }
-                  }}
+                  onClick={() => handleMenuClick(page)}
                   sx={{ my: 2, color: 'black', display: 'block' }} // Change to white color
                 >
                   {page}
