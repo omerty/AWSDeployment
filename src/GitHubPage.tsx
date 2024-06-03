@@ -3,13 +3,15 @@ import Tooltip from '@mui/material/Tooltip';
 
 function GitHubPage() {
     const css = `
+
     .BitCoin img {
         position: absolute; 
-        width: 600px;
-        height: 400px;
-        bottom: -600px; /* Adjust as needed */
-        left: 20%;
+        width: 40vw; 
+        height: 30vw; 
+        bottom: -90vh; 
+        left: 22%;
         transform: translateX(-50%);
+        margin-top: 10vh;
     }
 
     .BitCoin:hover {
@@ -19,20 +21,21 @@ function GitHubPage() {
     .Header1 {
       text-align: center;
       position: absolute;
-      top: 115%;
-      left: 4.5%;
-      margin-bottom: 34px;
+      top: 115vh;
+      left: 2%;
+      margin-bottom: 3.4vh;
+      margin-top: 2vh;
       font-family: 'Monaco';
-      font-size: 30px;
+      font-size: 2vw;
       color: white;
     }
 
     .NetflixClone img {
         position: absolute; 
-        width: 600px;
-        height: 400px;
-        bottom: -600px; /* Adjust as needed */
-        left: 80%;
+        width: 40vw; /* Adjusted for responsiveness */
+        height: 30vw; /* Maintains aspect ratio */
+        bottom: -90vh; /* Adjust as needed */
+        left: 78%;
         transform: translateX(-50%);
     }
 
@@ -43,20 +46,21 @@ function GitHubPage() {
     .Header2 {
       text-align: center;
       position: absolute;
-      top: 115%;
-      left: 76%;
-      margin-bottom: 34px;
+      top: 115vh;
+      left: 71%;
+      margin-bottom: 2vh;
+      margin-top: 2vh;
       font-family: 'Monaco';
-      font-size: 30px;
+      font-size: 2vw;
       color: white;
     }
 
     .MachineLearningChatBot img {
         position: absolute; 
-        width: 600px;
-        height: 400px;
-        bottom: -1200px; /* Adjust as needed */
-        left: 20%;
+        width: 40vw; /* Adjusted for responsiveness */
+        height: 30vw; /* Maintains aspect ratio */
+        bottom: -175vh; /* Adjust as needed */
+        left: 22%;
         transform: translateX(-50%);
     }
 
@@ -67,11 +71,12 @@ function GitHubPage() {
     .Header3 {
         text-align: center;
         position: absolute;
-        top: 179%;
+        top: 200vh;
         left: 10%;
-        margin-bottom: 34px;
+        margin-bottom: 3.4vh;
+        margin-top: 2vh;
         font-family: 'Monaco';
-        font-size: 30px;
+        font-size: 2vw;
         color: white;
     }
     `;
@@ -91,7 +96,7 @@ function GitHubPage() {
                 </a>
             </div>
             <div className="NetflixClone">
-                <Tooltip title="Click to explore more about NetFlix CLone">
+                <Tooltip title="Click to explore more about NetFlix Clone">
                     <a href="https://github.com/omerty/Netflix--Cloone-Beta-" target="_self">
                         <img id='NetflixClone1' src="/NetflixClone.png" alt="Scroll Image" />
                     </a>

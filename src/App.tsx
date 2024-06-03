@@ -1,3 +1,97 @@
+// import React, { useRef } from 'react';
+// import { StrictMode } from 'react';
+// import ButtonAppBar from './ToolBar';
+// import MainPage from './MainPage';
+// import TypeWriter from './TypeWriter';
+// import { StyledEngineProvider } from '@mui/material/styles';
+// import GitHubPage from './GitHubPage';
+// import Chatbot from './chatbot';
+
+// function App() {
+//   const projectsRef = useRef<HTMLDivElement>(null);
+
+//   let css = `
+//   html, body {
+//     margin: 0;
+//     height: 100%;
+//     width: 100%;
+//   }
+
+//   body {
+//     background-image: url("https://static.vecteezy.com/system/resources/previews/028/536/656/original/abstract-background-illustration-on-gradient-mesh-design-style-elegant-black-grey-colors-blend-suitable-for-website-wallpaper-digital-banner-decoration-backdrop-poster-free-vector.jpg");
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-attachment: fixed;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: center;
+//     min-height: 50000vh;
+//   }
+  
+//   .Introduction {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//   }
+//   `;
+
+//   return (
+//     <StrictMode>
+//       <style>{css}</style>
+//       <StyledEngineProvider injectFirst>
+//         <ButtonAppBar projectsRef={projectsRef} />
+//         <MainPage />
+//         <div ref={projectsRef}>
+//           <GitHubPage />
+//         </div>
+//         <Chatbot />
+//         <div
+//           style={{
+//             position: 'absolute',
+//             top: '38%', // Adjust as needed
+//             left: '50%',
+//             transform: 'translate(-50%, -50%)',
+//             textAlign: 'center',
+//           }}
+//         >
+//           <h1 style={{
+//             fontSize: '48px',
+//             color: '#31aaf5',
+//             margin: '0',
+//             fontFamily: 'Arial, sans-serif',
+//             marginTop: 210
+//           }}>
+//             Hi, I'm
+//           </h1>
+//         </div>
+//         <div
+//           style={{
+//             position: 'absolute',
+//             top: '56%', // Adjust as needed
+//             left: '50%',
+//             transform: 'translate(-50%, -50%)',
+//             textAlign: 'center',
+//           }}
+//         >
+//           <h1 style={{
+//             fontSize: '48px',
+//             color: '#31aaf5',
+//             margin: '0',
+//             fontFamily: 'Arial, sans-serif',
+//           }}>
+//             <TypeWriter />
+//           </h1>
+//         </div>
+//       </StyledEngineProvider>
+//     </StrictMode>
+//   );
+// }
+
+// export default App;
+
+
 import React, { useRef } from 'react';
 import { StrictMode } from 'react';
 import ButtonAppBar from './ToolBar';
@@ -6,6 +100,7 @@ import TypeWriter from './TypeWriter';
 import { StyledEngineProvider } from '@mui/material/styles';
 import GitHubPage from './GitHubPage';
 import Chatbot from './chatbot';
+import ContactMeBox from './ContactMe';
 
 function App() {
   const projectsRef = useRef<HTMLDivElement>(null);
@@ -26,7 +121,7 @@ function App() {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 50000vh;
+    min-height: 800vh; /* Use viewport height */
   }
   
   .Introduction {
@@ -47,21 +142,22 @@ function App() {
           <GitHubPage />
         </div>
         <Chatbot />
+        <ContactMeBox />
         <div
           style={{
             position: 'absolute',
-            top: '38%', // Adjust as needed
+            top: '45vh', // Adjust as needed, using viewport height
             left: '50%',
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
           }}
         >
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '3vw', // Use viewport width for font size
             color: '#31aaf5',
             margin: '0',
             fontFamily: 'Arial, sans-serif',
-            marginTop: 210
+            marginTop: '10vh' // Use viewport height for margin
           }}>
             Hi, I'm
           </h1>
@@ -69,14 +165,14 @@ function App() {
         <div
           style={{
             position: 'absolute',
-            top: '56%', // Adjust as needed
-            left: '50%',
+            top: '57vh', // Adjust as needed, using viewport height
+            left: '49%',
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
           }}
         >
           <h1 style={{
-            fontSize: '48px',
+            fontSize: '3vw', // Use viewport width for font size
             color: '#31aaf5',
             margin: '0',
             fontFamily: 'Arial, sans-serif',
@@ -90,3 +186,4 @@ function App() {
 }
 
 export default App;
+

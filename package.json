@@ -26,6 +26,7 @@
     "react-dom": "^17.0.0",
     "react-frame-component": "^5.2.6",
     "react-router-dom": "^6.23.1",
+    "styled-components": "^6.1.11",
     "use-carousel-hook": "^0.2.1"
   },
   "devDependencies": {

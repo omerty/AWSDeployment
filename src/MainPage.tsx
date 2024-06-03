@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import ProgressBar from './ProgressBar';
-import Tooltip from '@mui/material/Tooltip';
 import { useCarousel } from 'use-carousel-hook';
 
 function MainPage() {
@@ -33,26 +31,24 @@ function MainPage() {
 
   .Image {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    width: 100%;
+    width: 500%;
     height: 100%;
   }
 
   .Image img {
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
+    width: 15vw;
+    height: 15vw;
     border-radius: 50%;
-    margin-top: -380px;
+    margin-top: -38vh;
   }
 
   .GitHub img {
     position: absolute;
-    width: 170px;
-    height: 170px;
-    bottom: 230px; /* Adjust as needed */
+    width: 10vw;
+    height: 10vw;
+    bottom: 21vh;
     left: 45%;
     transform: translateX(-50%);
   }
@@ -63,9 +59,9 @@ function MainPage() {
 
   .LinkedIn img {
     position: absolute;
-    width: 75px;
-    height: 75px;
-    bottom: 275px; /* Adjust as needed */
+    width: 4.5vw;
+    height: 4.5vw;
+    bottom: 26.5vh;
     left: 55%;
     transform: translateX(-50%);
   }
@@ -76,10 +72,10 @@ function MainPage() {
 
   .scroll img {
     position: absolute;
-    top: 90%;
+    top: 92%;
     left: 50%;
-    width: 300px;
-    height: 200px;
+    width: 20vw;
+    height: 11vw;
     transform: translate(-50%, -50%);
     border-radius: 50%;
   }
@@ -89,54 +85,43 @@ function MainPage() {
     position: absolute;
     top: 57%;
     left: 25%;
-    margin-bottom: 64px;
-    fontFamily: 'Monaco';
+    margin-bottom: 6.4vh;
+    font-family: 'Monaco';
   }
 
   .text {
     position: absolute;
     top: 57%;
     left: 75%;
-    inline-size: 1000px;
+    inline-size: 100vw;
   }
 
   .header {
     position: absolute;
-    transform: translate(50%, 700%);
-    font-size: 42px;
+    font-size: 3vw;
     font-family: 'Times New Roman, serif';
     color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -19vh; /* Adjust this value to control the vertical positioning */
   }
 
   .languages {
     position: absolute;
-    font-size: 42px;
+    font-size: 3vw;
     font-family: 'Times New Roman, serif';
     color: white;
-    left: 853px;
-    bottom: -1400px;
-  }
-
-  .giphy1 {
-    position: absolute;
-    top: 135%;
-    left: 0%;
-  }
-
-  .Quotation {
-    position: absolute;
-    display: block;
-    top: 190%;
-    left: 45%;
-    font-size: 40px;
-    font-family: 'Times New Roman, serif';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -210vh; /* Adjust this value to control the vertical positioning */
   }
 
   .slideshow {
     position: absolute;
+    bottom: -280vh; /* Adjust this value to control the vertical positioning */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    margin-top: 1900px;
-    margin-left: -250px;
   }
 
   .carousel__list {
@@ -145,9 +130,8 @@ function MainPage() {
     padding: 0;
     overflow: hidden;
     position: relative;
-    width: 75vw;
+    width: 50vw;
     margin: 0 auto;
-    max-width: 50rem;
   }
 
   .carousel__item {
@@ -158,9 +142,9 @@ function MainPage() {
   }
 
   .carousel__item img {
-    width: 600px; /* Adjust as needed */
-    height: 400px; /* Adjust as needed */
-    object-fit: cover; /* Ensure images cover the entire area */
+    width: 42vw;
+    height: 30vw;
+    object-fit: cover;
   }
 
   .arrow-button {
@@ -174,16 +158,16 @@ function MainPage() {
   }
 
   .arrow-button img {
-    width: 50px;
-    height: 50px;
+    width: 5vw;
+    height: 5vw;
   }
 
   .arrow-left {
-    left: -60px; /* Adjust as needed */
+    left: -6vw;
   }
 
   .arrow-right {
-    right: -60px; /* Adjust as needed */
+    right: -6vw;
   }
   `;
 
@@ -218,7 +202,6 @@ function MainPage() {
 
       <div className="WhatId">
         <h2 className="header">Projects</h2>
-        <div className="boxStyle"></div>
         <h3 className="languages">Languages</h3>
         <div className="slideshow">
           <button className="arrow-button arrow-left" onClick={() => previous()}>
@@ -257,3 +240,4 @@ function MainPage() {
 }
 
 export default MainPage;
+
