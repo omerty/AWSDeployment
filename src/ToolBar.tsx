@@ -10,23 +10,24 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['About', 'Projects', 'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['About', 'Projects', 'Languages', 'Contact'];
 
 interface ResponsiveAppBarProps {
   projectsRef: RefObject<HTMLDivElement>;
+  contactRef: RefObject<HTMLDivElement>;
+  LanuageRef: RefObject<HTMLDivElement>;
 }
 
-const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({ projectsRef}) => {
+const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({ projectsRef, contactRef, LanuageRef}) => {
 
   const scrollToSection = (elementRef: RefObject<HTMLDivElement>) => {
     if (elementRef.current) {
       window.scrollTo({
-        top: elementRef.current.offsetTop,
+        top: elementRef.current.offsetTop - 100, // Adjust 64 if AppBar height is different
         behavior: 'smooth',
       });
     }
-  }
+  };
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
@@ -121,6 +122,10 @@ const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({ projectsRef}) => {
                       handleCloseNavMenu();
                       if (page === 'Projects') {
                         scrollToSection(projectsRef);
+                      }else if (page === 'Contact') {
+                        scrollToSection(contactRef);
+                      }else if (page === 'Languages') {
+                        scrollToSection(contactRef);
                       }
                     }}
                   >
@@ -154,6 +159,10 @@ const ResponsiveAppBar: React.FC<ResponsiveAppBarProps> = ({ projectsRef}) => {
                   onClick={() => {
                     if (page === 'Projects') {
                       scrollToSection(projectsRef);
+                    }else if (page === 'Contact') {
+                      scrollToSection(contactRef);
+                    }else if (page === 'Languages') {
+                      scrollToSection(LanuageRef);
                     }
                   }}
                   sx={{ my: 2, color: 'black', display: 'block' }} // Change to white color

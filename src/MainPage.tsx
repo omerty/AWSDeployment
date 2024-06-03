@@ -116,13 +116,7 @@ function MainPage() {
     bottom: -210vh; /* Adjust this value to control the vertical positioning */
   }
 
-  .slideshow {
-    position: absolute;
-    bottom: -280vh; /* Adjust this value to control the vertical positioning */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
+
 
   .carousel__list {
     display: flex;
@@ -203,37 +197,6 @@ function MainPage() {
       <div className="WhatId">
         <h2 className="header">Projects</h2>
         <h3 className="languages">Languages</h3>
-        <div className="slideshow">
-          <button className="arrow-button arrow-left" onClick={() => previous()}>
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png" alt="Previous" />
-          </button>
-          <button className="arrow-button arrow-right" onClick={() => next()}>
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/chevron-right.png" alt="Next" />
-          </button>
-          <ul ref={ref} className="carousel__list">
-            <li className="carousel__item">
-              <img src="https://devblogs.microsoft.com/python/wp-content/uploads/sites/12/2018/08/pythonfeature.png" alt="Image 1" />
-            </li>
-            <li className="carousel__item">
-              <img src="https://www.trainingint.com/wp-content/uploads/java-image.jpg" alt="Image 2" />
-            </li>
-            <li className="carousel__item">
-              <img src="https://miro.medium.com/v2/resize:fit:800/1*bthRXJ_FBspSEijOWIRM2A.png" alt="Image 3" />
-            </li>
-            <li className="carousel__item">
-              <img src="https://miro.medium.com/v2/resize:fit:814/1*l_fkDG3AvqcXwsFm5OeSfw.png" alt="Image 4" />
-            </li>
-            <li className="carousel__item">
-              <img src="https://www.patterns.dev/img/reactjs/react-logo@3x.svg" alt="Image 5" />
-            </li>
-            <li className="carousel__item">
-              <img src="https://miro.medium.com/v2/resize:fit:1100/1*f2i47G95nVCx71KzM1iXlg.png" alt="Image 6" />
-            </li>
-            <li className="carousel__item">
-              <img src="https://i.pinimg.com/736x/5f/d4/99/5fd499d048f90f0fb6b93cf5b8c7ed2a.jpg" alt="Image 7" />
-            </li>
-          </ul>
-        </div>
       </div>
     </div>
   );

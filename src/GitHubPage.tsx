@@ -32,9 +32,9 @@ function GitHubPage() {
 
     .NetflixClone img {
         position: absolute; 
-        width: 40vw; /* Adjusted for responsiveness */
-        height: 30vw; /* Maintains aspect ratio */
-        bottom: -90vh; /* Adjust as needed */
+        width: 40vw; 
+        height: 30vw; 
+        bottom: -90vh; 
         left: 78%;
         transform: translateX(-50%);
     }
@@ -57,9 +57,9 @@ function GitHubPage() {
 
     .MachineLearningChatBot img {
         position: absolute; 
-        width: 40vw; /* Adjusted for responsiveness */
-        height: 30vw; /* Maintains aspect ratio */
-        bottom: -175vh; /* Adjust as needed */
+        width: 40vw; 
+        height: 30vw; 
+        bottom: -175vh; 
         left: 22%;
         transform: translateX(-50%);
     }
