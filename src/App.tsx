@@ -63,7 +63,7 @@ function App() {
         <div ref={projectsRef}>
           <GitHubPage />
         </div>
-        <Chatbot />
+        {/* <Chatbot /> */}
         <div
           style={{
             position: 'absolute',

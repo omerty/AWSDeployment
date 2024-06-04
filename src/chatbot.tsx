@@ -8,9 +8,9 @@ const Chatbot = () => {
 
   const sendMessage = async () => {
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/chatbot', { message: userMessage });
+      const response = await axios.post('https://immense-shelf-64013-cf032f3f3f78.herokuapp.com/api/chatbot', { message: userMessage });
       setBotResponse(response.data.response);
-      setUserMessage(''); // Clear text box after sending
+      setUserMessage('');
     } catch (error) {
       console.error('Error sending message:', error);
     }
@@ -73,7 +73,6 @@ const Chatbot = () => {
             color: '#fff',
           }}
         >
-          x
         </button>
         <div>
           <input

@@ -16,13 +16,13 @@ CORS(app)  # Enable CORS for your Flask app
 lemmatizer = WordNetLemmatizer()
 
 # Load intents data from JSON file
-with open('intents.json') as file:
+with open('src/intents.json') as file:
     intents = json.load(file)
 
 # Load preprocessed data from pickle files
-words = pickle.load(open('words.pkl', "rb"))
-classes = pickle.load(open('classes.pkl', "rb"))
-model = load_model('chatbotmodel.h5')
+words = pickle.load(open('src/words.pkl', "rb"))
+classes = pickle.load(open('src/classes.pkl', "rb"))
+model = load_model('src/chatbotmodel.h5')
 
 # Function to clean up sentences by tokenizing and lemmatizing words
 def clean_up_sentence(sentence):

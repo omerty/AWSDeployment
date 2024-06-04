@@ -16,6 +16,9 @@ function Slideshow() {
     align-items: center;
   }
 
+  .slideshow {
+    position: relative; /* Add this line */
+  }
 
   .carousel__list {
     display: flex;
@@ -56,13 +59,13 @@ function Slideshow() {
   }
 
   .arrow-left {
-    left: -6vw;
+    left: -12vw;
   }
 
   .arrow-right {
-    right: 2vw;
+    right: -6vw; /* Change this value to adjust the position */
   }
-  `;
+`;
 
   return (
     <div>
